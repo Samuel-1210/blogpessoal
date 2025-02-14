@@ -5,7 +5,7 @@ function Home() {
         <div className="flex justify-center bg-indigo-800">
           <div className="container grid grid-cols-2 text-zinc-50">
             <div className="flex flex-col items-center justify-center gap-4 py-4">
-              <h2 className="text-5xl font-bold font-tiny">
+              <h2 className="text-5xl font-bold font-['Sixtyfour Convergence']">
                 Seja Bem Vindo(a)!
               </h2>
               <p className="text-xl">
