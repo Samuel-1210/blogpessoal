@@ -10,6 +10,6 @@
 }
 
 body {
-  font-family: var(--font-four);
-  background-color: var(--bg-indigo-800);
+  /* font-family: var(--font-four); */
+  background-color: var(white);
 }

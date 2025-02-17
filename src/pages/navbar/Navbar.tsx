@@ -1,7 +1,19 @@
 import { DoorOpen } from "@phosphor-icons/react";
-import { Link } from "react-router-dom";
+import { useContext } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import { AuthContext } from "../../contexts/AuthContext";
 
 const Navbar = () => {
+  const navigate = useNavigate();
+
+  const { handleLogout } = useContext(AuthContext);
+
+  function logout() {
+    handleLogout();
+    alert("O Usuário foi desconectado com sucesso!");
+    navigate("/");
+  }
+
   return (
     <div className="sticky top-0  px-9 py-3 opacity-95 bg-indigo-900 h-15 ">
       <div id="header_content" className="flex justify-between text-zinc-50 ">
@@ -42,7 +54,7 @@ const Navbar = () => {
               </li>
 
               <li className="hover:text-zinc-400">
-                <Link className="flex items-center" to="/login">
+                <Link className="flex items-center" to="" onClick={logout}>
                   Sair
                   <DoorOpen size={18} className="ml-2" weight="bold" />
                 </Link>
