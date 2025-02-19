@@ -33,20 +33,16 @@ const Navbar = () => {
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-zinc-400">
+                <Link to="/temas" className="hover:text-zinc-400">
                   Temas
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="hover:text-zinc-400">
-                  Cadastrar
-                </a>
+                <Link to="/cadastrartema" className="hover:text-zinc-400">
+                  CadastrarTemas
+                </Link>
               </li>
-              <li>
-                <a href="#" className="hover:text-zinc-400">
-                  Tema
-                </a>
-              </li>
+
               <li>
                 <a href="#" className="hover:text-zinc-400">
                   Perfil
