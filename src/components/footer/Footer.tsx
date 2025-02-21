@@ -3,7 +3,7 @@ import { GithubLogo, InstagramLogo, LinkedinLogo } from "@phosphor-icons/react";
 const Footer = () => {
   let data = new Date().getFullYear();
   return (
-    <div className="flex bottom-0 left-0 flex-col items-center px-9 py-3 bg-indigo-900 text-zinc-50 gap-1">
+    <div className="flex flex-col items-center px-9 py-3 bg-indigo-900 text-zinc-50 gap-1 mt-auto">
       <p className="font-bold">Blog Pessoal Generation / Copyright: {data}</p>
       <p>Acesse minhas redes sociais</p>
 

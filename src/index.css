@@ -6,7 +6,7 @@
 :root {
   --font-tiny: "Tiny5", sans-serif;
   --font-four: "Sixtyfour Convergence", sans-serif;
-  --bg-indigo-800: #3730a3;
+  --bg-indigo-800: green;
 }
 
 body {

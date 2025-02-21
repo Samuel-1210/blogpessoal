@@ -1,21 +1,23 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Footer from "./pages/footer/Footer";
+import Footer from "./components/footer/Footer";
 import Home from "./pages/home/Home";
-import Navbar from "./pages/navbar/Navbar";
+import Navbar from "./components/navbar/Navbar";
 import Login from "./pages/login/Login";
 import Cadastro from "./pages/cadastro/Cadastro";
 import { AuthProvider } from "./contexts/AuthContext";
 import ListaTemas from "./components/temas/listatemas/ListaTemas";
 import FormTema from "./components/temas/formtema/FormTema";
 import DeletarTema from "./components/temas/deletartema/DeletarTema";
-
+import ListaPostagens from "./components/postagens/listapostagens/ListaPostagens";
+import FormPostagem from "./components/postagens/formpostagem/FormPostagem";
+import DeletarPostagem from "./components/postagens/deletarpostagem/DeletarPostagem";
 function App() {
   return (
-    <>
-      <AuthProvider>
-        <BrowserRouter>
+    <AuthProvider>
+      <BrowserRouter>
+        <div className="flex flex-col min-h-screen">
           <Navbar />
-          <div className="min-h-[80vh]">
+          <main className="flex-grow">
             <Routes>
               <Route path="/" element={<Login />} />
               <Route path="/home" element={<Home />} />
@@ -25,12 +27,19 @@ function App() {
               <Route path="/cadastrartema" element={<FormTema />} />
               <Route path="/editartema/:id" element={<FormTema />} />
               <Route path="/deletartema/:id" element={<DeletarTema />} />
+              <Route path="/postagens" element={<ListaPostagens />} />
+              <Route path="/cadastrarpostagem" element={<FormPostagem />} />
+              <Route path="/editarpostagem/:id" element={<FormPostagem />} />
+              <Route
+                path="/deletarpostagem/:id"
+                element={<DeletarPostagem />}
+              />
             </Routes>
-          </div>
+          </main>
           <Footer />
-        </BrowserRouter>
-      </AuthProvider>
-    </>
+        </div>
+      </BrowserRouter>
+    </AuthProvider>
   );
 }
 
