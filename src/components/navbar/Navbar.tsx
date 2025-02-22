@@ -34,9 +34,9 @@ const Navbar = () => {
             CadastrarTemas
           </Link>
 
-          <a href="#" className="hover:text-zinc-400">
+          <Link to="/perfil" className="hover:text-zinc-400">
             Perfil
-          </a>
+          </Link>
 
           <Link
             className="flex items-center hover:text-zinc-400"
